@@ -41,13 +41,13 @@
 
 	 var bluecrystalImage = $("<img>").addClass("crystalImage").attr("src", "assets/images/crystala.jpg");
 
-		bluecrystalImage.data("crystalvalue", bluecrystalNumber);
+		bluecrystalImage.data("bluecrystalvalue", bluecrystalNumber);
 
 		$("#crystals").append(bluecrystalImage);
 
 		$('.crystalImage').on('click', function() {
 
-		var bluecrystalValue = ($(this).data("crystalvalue"));
+		var bluecrystalValue = ($(this).data("bluecrystalvalue"));
 
 			counter = counter + bluecrystalValue;
 			$('#totalScore').text(counter);
@@ -60,7 +60,7 @@
 				targetNumber = Math.floor(Math.random() * 120 + 19);
 				$('#numberToGuess').text(targetNumber);
 					bluecrystalNumber = Math.floor(Math.random() * 12 + 1);
-						bluecrystalValue = $(this).data("crystalvalue", bluecrystalNumber);
+						bluecrystalValue = $(this).data("bluecrystalvalue", bluecrystalNumber);
 
 			} 
 			else if (counter > targetNumber) {
@@ -73,7 +73,7 @@
 				$('#numberToGuess').text(targetNumber);
 					bluecrystalNumber = Math.floor(Math.random() * 12 + 1);
 
-						bluecrystalValue = $(this).data("crystalvalue", bluecrystalNumber);
+						bluecrystalValue = $(this).data("bluecrystalvalue", bluecrystalNumber);
 				
 			}
                 var html = 
@@ -83,6 +83,53 @@
                 document.querySelector('#displayResults').innerHTML = html;
 
 	});
+
+	// var redcrystalNumber = Math.floor(Math.random() * 12 + 1);
+
+	//  	var redcrystalImage = $("<img>").addClass("crystalImage").attr("src", "assets/images/crystalb.jpg");
+
+	// 		redcrystalImage.data("redcrystalvalue", redcrystalNumber);
+
+	// 	$("#crystals").append(redcrystalImage);
+
+	// 	$('.crystalImage').on('click', function() {
+
+	// 		var redcrystalValue = ($(this).data("redcrystalvalue"));
+
+	// 		counter = counter + redcrystalValue;
+	// 		$('#totalScore').text(counter);
+
+	// 		if (counter === targetNumber) {
+	// 			wins++;
+	// 			$('#playerStatus').text('You Win!');
+	// 			counter = 0;
+	// 			$('#totalScore').text(counter);
+	// 			targetNumber = Math.floor(Math.random() * 120 + 19);
+	// 			$('#numberToGuess').text(targetNumber);
+	// 				redcrystalNumber = Math.floor(Math.random() * 12 + 1);
+	// 					redcrystalValue = $(this).data("redcrystalvalue", redcrystalNumber);
+
+	// 		} 
+	// 		else if (counter > targetNumber) {
+	// 			losses++
+	// 			$('#playerStatus').text('You Lose!');
+	// 			counter = 0;
+	// 			$('#totalScore').text(counter);
+	// 			targetNumber = Math.floor(Math.random() * 120 + 19);
+				
+	// 			$('#numberToGuess').text(targetNumber);
+	// 				redcrystalNumber = Math.floor(Math.random() * 12 + 1);
+
+	// 					redcrystalValue = $(this).data("redcrystalvalue", redcrystalNumber);
+				
+	// 		}
+ //                var html = 
+ //                "<p>Wins: " + wins + "</p>" +
+ //                "<p>Losses: " + losses + "</p>";
+
+ //                document.querySelector('#displayResults').innerHTML = html;
+
+	// });
 
 
 
