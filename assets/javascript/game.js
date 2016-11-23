@@ -1,7 +1,5 @@
 // There will be four crystals displayed as buttons on the page.
 
-// The player will be shown a random number at the start of the game.
-
 // When the player clicks on a crystal, it will add a specific amount of points to the player's total score.
 
 // Your game will hide this amount until the player clicks a crystal.
@@ -20,45 +18,74 @@
 
 // Game design notes:
 
-// The random number shown at the start of the game should be between 19 - 120.
+
 
 // Each crystal should have a random hidden value between 1 - 12.
-	var targetNumber = 53;
 
+	// The random number shown at the start of the game should be between 19 - 120.
+	// x = 19, y = 120
+	// Math.floor(Math.random() * ((y-x)+1) + x);
+	// Math.floor(Math.random() * y + x);
+	var targetNumber = Math.floor(Math.random() * 120 + 19);
+		
+		
+	// The player will be shown a random number at the start of the game.
 	$('#numberToGuess').text(targetNumber);
 
-
-
 	var counter = 0;
+	var wins = 0;
+	var losses = 0;
 
-	var numberOptions = [10, 5, 3, 7];
 
-	for (var i = 0; i < numberOptions.length; i++) {
+	var bluecrystalNumber = Math.floor(Math.random() * 12 + 1);
 
-		var imageCrystal = $("<img>").addClass("crystalImage").attr("src", "assets/images/crystala.jpg");
+	 var bluecrystalImage = $("<img>").addClass("crystalImage").attr("src", "assets/images/crystala.jpg");
 
-		imageCrystal.attr("data-crystalvalue", numberOptions[i]);
+		bluecrystalImage.data("crystalvalue", bluecrystalNumber);
 
-		$("#crystals").append(imageCrystal);
+		$("#crystals").append(bluecrystalImage);
 
-	}
-	
-	$('.crystalImage').on('click', function() {
+		$('.crystalImage').on('click', function() {
 
-		var crystalValue = ($(this).data("crystalvalue"));
+		var bluecrystalValue = ($(this).data("crystalvalue"));
 
-			counter = counter + crystalValue;
-
-			console.log('Your new score is: ' + counter);
+			counter = counter + bluecrystalValue;
+			$('#totalScore').text(counter);
 
 			if (counter === targetNumber) {
+				wins++;
+				$('#playerStatus').text('You Win!');
+				counter = 0;
+				$('#totalScore').text(counter);
+				targetNumber = Math.floor(Math.random() * 120 + 19);
+				$('#numberToGuess').text(targetNumber);
+					bluecrystalNumber = Math.floor(Math.random() * 12 + 1);
+						bluecrystalValue = $(this).data("crystalvalue", bluecrystalNumber);
 
-				console.log('You Win!');
 			} 
 			else if (counter > targetNumber) {
+				losses++
+				$('#playerStatus').text('You Lose!');
+				counter = 0;
+				$('#totalScore').text(counter);
+				targetNumber = Math.floor(Math.random() * 120 + 19);
+				
+				$('#numberToGuess').text(targetNumber);
+					bluecrystalNumber = Math.floor(Math.random() * 12 + 1);
 
-				alert('You lose!!');
+						bluecrystalValue = $(this).data("crystalvalue", bluecrystalNumber);
+				
 			}
+                var html = 
+                "<p>Wins: " + wins + "</p>" +
+                "<p>Losses: " + losses + "</p>";
+
+                document.querySelector('#displayResults').innerHTML = html;
 
 	});
+
+
+
+
+
 
