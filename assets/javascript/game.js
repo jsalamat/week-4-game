@@ -39,16 +39,14 @@
 
 	var bluecrystalNumber = Math.floor(Math.random() * 12 + 1);
 
-	 var bluecrystalImage = $("<img>").addClass("crystalImage").attr("src", "assets/images/crystala.jpg");
-
-		bluecrystalImage.data("bluecrystalvalue", bluecrystalNumber);
+	 var bluecrystalImage = $("<img>").addClass("crystalImage1").attr("src", "assets/images/crystala.jpg").data("crystalvalue", bluecrystalNumber);
 
 		$("#crystals").append(bluecrystalImage);
 
-		$('.crystalImage').on('click', function() {
+		$('.crystalImage1').on('click', function() {
 
-		var bluecrystalValue = ($(this).data("bluecrystalvalue"));
-
+		bluecrystalValue = ($(this).data("crystalvalue"));
+				console.log(bluecrystalValue);
 			counter = counter + bluecrystalValue;
 			$('#totalScore').text(counter);
 
@@ -60,7 +58,7 @@
 				targetNumber = Math.floor(Math.random() * 120 + 19);
 				$('#numberToGuess').text(targetNumber);
 					bluecrystalNumber = Math.floor(Math.random() * 12 + 1);
-						bluecrystalValue = $(this).data("bluecrystalvalue", bluecrystalNumber);
+						bluecrystalValue = $(this).data(bluecrystalNumber);
 
 			} 
 			else if (counter > targetNumber) {
@@ -73,7 +71,7 @@
 				$('#numberToGuess').text(targetNumber);
 					bluecrystalNumber = Math.floor(Math.random() * 12 + 1);
 
-						bluecrystalValue = $(this).data("bluecrystalvalue", bluecrystalNumber);
+						bluecrystalValue = $(this).data("crystalvalue", bluecrystalNumber);
 				
 			}
                 var html = 
@@ -84,55 +82,151 @@
 
 	});
 
-	// var redcrystalNumber = Math.floor(Math.random() * 12 + 1);
+	var redcrystalNumber = Math.floor(Math.random() * 12 + 1);
 
-	//  	var redcrystalImage = $("<img>").addClass("crystalImage").attr("src", "assets/images/crystalb.jpg");
+	 	var redcrystalImage = $("<img>").addClass("crystalImage2").attr("src", "assets/images/crystalb.jpg").data("redcrystalvalue", redcrystalNumber);
 
-	// 		redcrystalImage.data("redcrystalvalue", redcrystalNumber);
+		$("#crystals").append(redcrystalImage);
 
-	// 	$("#crystals").append(redcrystalImage);
+		$('.crystalImage2').on('click', function() {
 
-	// 	$('.crystalImage').on('click', function() {
+			redcrystalValue = ($(this).data("redcrystalvalue"));
+					console.log(redcrystalValue);
+			counter = counter + redcrystalValue;
+			$('#totalScore').text(counter);
 
-	// 		var redcrystalValue = ($(this).data("redcrystalvalue"));
+			if (counter === targetNumber) {
+				wins++;
+				$('#playerStatus').text('You Win!');
+				counter = 0;
+				$('#totalScore').text(counter);
+				targetNumber = Math.floor(Math.random() * 120 + 19);
+				$('#numberToGuess').text(targetNumber);
+					redcrystalNumber = Math.floor(Math.random() * 12 + 1);
+						redcrystalValue = $(this).data("redcrystalvalue", redcrystalNumber);
 
-	// 		counter = counter + redcrystalValue;
-	// 		$('#totalScore').text(counter);
-
-	// 		if (counter === targetNumber) {
-	// 			wins++;
-	// 			$('#playerStatus').text('You Win!');
-	// 			counter = 0;
-	// 			$('#totalScore').text(counter);
-	// 			targetNumber = Math.floor(Math.random() * 120 + 19);
-	// 			$('#numberToGuess').text(targetNumber);
-	// 				redcrystalNumber = Math.floor(Math.random() * 12 + 1);
-	// 					redcrystalValue = $(this).data("redcrystalvalue", redcrystalNumber);
-
-	// 		} 
-	// 		else if (counter > targetNumber) {
-	// 			losses++
-	// 			$('#playerStatus').text('You Lose!');
-	// 			counter = 0;
-	// 			$('#totalScore').text(counter);
-	// 			targetNumber = Math.floor(Math.random() * 120 + 19);
+			} 
+			else if (counter > targetNumber) {
+				losses++
+				$('#playerStatus').text('You Lose!');
+				counter = 0;
+				$('#totalScore').text(counter);
+				targetNumber = Math.floor(Math.random() * 120 + 19);
 				
-	// 			$('#numberToGuess').text(targetNumber);
-	// 				redcrystalNumber = Math.floor(Math.random() * 12 + 1);
+				$('#numberToGuess').text(targetNumber);
+					redcrystalNumber = Math.floor(Math.random() * 12 + 1);
 
-	// 					redcrystalValue = $(this).data("redcrystalvalue", redcrystalNumber);
+						redcrystalValue = $(this).data("redcrystalvalue", redcrystalNumber);
 				
-	// 		}
- //                var html = 
- //                "<p>Wins: " + wins + "</p>" +
- //                "<p>Losses: " + losses + "</p>";
+			}
+                var html = 
+                "<p>Wins: " + wins + "</p>" +
+                "<p>Losses: " + losses + "</p>";
 
- //                document.querySelector('#displayResults').innerHTML = html;
+                document.querySelector('#displayResults').innerHTML = html;
 
-	// });
+	});
+
+	var greencrystalNumber = Math.floor(Math.random() * 12 + 1);
+
+	 	var greencrystalImage = $("<img>").addClass("crystalImage3").attr("src", "assets/images/crystalc.jpg").data("greencrystalvalue", greencrystalNumber);
+
+		$("#crystals").append(greencrystalImage);
+
+		$('.crystalImage3').on('click', function() {
+
+			greencrystalValue = ($(this).data("greencrystalvalue"));
+					console.log(greencrystalValue);
+			counter = counter + greencrystalValue;
+			$('#totalScore').text(counter);
+
+			if (counter === targetNumber) {
+				wins++;
+				$('#playerStatus').text('You Win!');
+				counter = 0;
+				$('#totalScore').text(counter);
+				targetNumber = Math.floor(Math.random() * 120 + 19);
+				$('#numberToGuess').text(targetNumber);
+					greencrystalNumber = Math.floor(Math.random() * 12 + 1);
+						greencrystalValue = $(this).data("greencrystalvalue", greencrystalNumber);
+
+			} 
+			else if (counter > targetNumber) {
+				losses++
+				$('#playerStatus').text('You Lose!');
+				counter = 0;
+				$('#totalScore').text(counter);
+				targetNumber = Math.floor(Math.random() * 120 + 19);
+				
+				$('#numberToGuess').text(targetNumber);
+					greencrystalNumber = Math.floor(Math.random() * 12 + 1);
+
+						greencrystalValue = $(this).data("greencrystalvalue", greencrystalNumber);
+				
+			}
+                var html = 
+                "<p>Wins: " + wins + "</p>" +
+                "<p>Losses: " + losses + "</p>";
+
+                document.querySelector('#displayResults').innerHTML = html;
+
+	});
+
+		var yellowcrystalNumber = Math.floor(Math.random() * 12 + 1);
+
+	 	var yellowcrystalImage = $("<img>").addClass("crystalImage4").attr("src", "assets/images/crystald.jpg").data("yellowcrystalvalue", yellowcrystalNumber);
+
+		$("#crystals").append(yellowcrystalImage);
+
+		$('.crystalImage4').on('click', function() {
+
+			yellowcrystalValue = ($(this).data("yellowcrystalvalue"));
+					console.log(yellowcrystalValue);
+			counter = counter + yellowcrystalValue;
+			$('#totalScore').text(counter);
+
+			if (counter === targetNumber) {
+				wins++;
+				$('#playerStatus').text('You Win!');
+				counter = 0;
+				$('#totalScore').text(counter);
+				targetNumber = Math.floor(Math.random() * 120 + 19);
+				$('#numberToGuess').text(targetNumber);
+					yellowcrystalNumber = Math.floor(Math.random() * 12 + 1);
+						yellowcrystalValue = $(this).data("yellowcrystalvalue", yellowcrystalNumber);
+
+			} 
+			else if (counter > targetNumber) {
+				losses++
+				$('#playerStatus').text('You Lose!');
+				counter = 0;
+				$('#totalScore').text(counter);
+				targetNumber = Math.floor(Math.random() * 120 + 19);
+				
+				$('#numberToGuess').text(targetNumber);
+					yellowcrystalNumber = Math.floor(Math.random() * 12 + 1);
+
+						yellowcrystalValue = $(this).data("yellowcrystalvalue", yellowcrystalNumber);
+				
+			}
+                var html = 
+                "<p>Wins: " + wins + "</p>" +
+                "<p>Losses: " + losses + "</p>";
+
+                document.querySelector('#displayResults').innerHTML = html;
+
+	});
 
 
+	
 
+
+// looks into your
+// redcrystalValue and 
+// redcrystalNumber  
+// and how you are using them
+
+// Are they interacting because of the same ID"#crystals",  or are they interacting because of the counter.
 
 
 
