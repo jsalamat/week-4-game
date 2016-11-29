@@ -1,31 +1,68 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>The Crystals Collector</title>
+    <title>JSThe Crystals Collector</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> 
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Rufina" rel="stylesheet">
+    
 </head>
 <body>
-	
-	<h1>Number to Guess: <span id="numberToGuess"></span></h1>
-  <div id="playerStatus">
+  
+  <div class="header">
+
+      <div class="row">
+          <div class="col-md-6">
+              <img class="empresslogo" src="assets/images/empress.png" alt=" empress logo">
+          </div>
+          <div class="col-md-6">
+              <h1>Empress of Tomorrow</h1>
+          </div>   
+      </div> 
+
+      <div class="row">
+          <div class="col-md-4"><h1>Crystal Quest</h1></div>   
+      </div>
+
+  </div>	
+
+  <div class="jumbotron">
+    <div class="container">
+          <div id="summary">
+            <div class="transbox">
+              <p>You will be given a random number at the start of your Quest.</p>
+              <p>The Empress of Tomorrow provided you four crytals. By clicking on a
+              crystal you will add a specific amount of points to your total score.</p>
+              <p>You win the game by matching your total score to random number, you lose
+              the game if your total score goes above the random number.</p>
+              <p>The value of each crystal is hidden from you until you click on it.</p>
+              <p>Each time when the game starts, the game will change the value of 
+              each crystal.</p>
+            </div>
+          </div>
+
+      	  <h2>Number to Guess: <span id="numberToGuess"></span></h2>
+          
+          <div id="playerStatus">
+          </div>
+
+        	<div id="displayWins">
+        	</div>
+
+          <div id="displayLosses">
+          </div>
+            
+           <div id="crystals"> 
+           <!-- <img class="crystalImage" src="assets/images/crystala.jpg" alt="crystals"> -->
+           </div>
+           <h2>Your total score is: <span id="totalScore"></span></h2>
+    </div>
   </div>
-	<div id="displayResults">
-	</div>
-    
-   <div id="crystals"> 
-   <!-- <img class="crystalImage" src="assets/images/crystala.jpg" alt="crystals"> -->
-   </div>
-   
-
-   <h1>Your total score is: <span id="totalScore"></span></h1>
-
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 
     <script type="text/javascript" src="assets/javascript/game.js"> 
-    
     </script>
 </body>
 </html>

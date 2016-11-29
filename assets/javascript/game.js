@@ -31,15 +31,18 @@
 		
 	// The player will be shown a random number at the start of the game.
 	$('#numberToGuess').text(targetNumber);
-
+	$('#playerStatus').text('Select Your Crystals');
+	
 	var counter = 0;
 	var wins = 0;
 	var losses = 0;
-
+	$('#displayWins').text('Wins: ' + wins);
+	$('#displayLosses').text('Losses: ' + losses);
+	$('#totalScore').text(counter);
 
 	var bluecrystalNumber = Math.floor(Math.random() * 12 + 1);
 
-	 var bluecrystalImage = $("<img>").addClass("crystalImage1").attr("src", "assets/images/crystala.jpg").data("crystalvalue", bluecrystalNumber);
+	 var bluecrystalImage = $("<img>").addClass("crystalImage1").attr("src", "assets/images/crystala.png").data("crystalvalue", bluecrystalNumber);
 
 		$("#crystals").append(bluecrystalImage);
 
@@ -74,17 +77,14 @@
 						bluecrystalValue = $(this).data("crystalvalue", bluecrystalNumber);
 				
 			}
-                var html = 
-                "<p>Wins: " + wins + "</p>" +
-                "<p>Losses: " + losses + "</p>";
-
-                document.querySelector('#displayResults').innerHTML = html;
+                $('#displayWins').text('Wins: ' + wins);
+				$('#displayLosses').text('Losses: ' + losses);
 
 	});
 
 	var redcrystalNumber = Math.floor(Math.random() * 12 + 1);
 
-	 	var redcrystalImage = $("<img>").addClass("crystalImage2").attr("src", "assets/images/crystalb.jpg").data("redcrystalvalue", redcrystalNumber);
+	 	var redcrystalImage = $("<img>").addClass("crystalImage2").attr("src", "assets/images/crystalb.png").data("redcrystalvalue", redcrystalNumber);
 
 		$("#crystals").append(redcrystalImage);
 
@@ -119,17 +119,14 @@
 						redcrystalValue = $(this).data("redcrystalvalue", redcrystalNumber);
 				
 			}
-                var html = 
-                "<p>Wins: " + wins + "</p>" +
-                "<p>Losses: " + losses + "</p>";
-
-                document.querySelector('#displayResults').innerHTML = html;
+                $('#displayWins').text('Wins: ' + wins);
+				$('#displayLosses').text('Losses: ' + losses);
 
 	});
 
 	var greencrystalNumber = Math.floor(Math.random() * 12 + 1);
 
-	 	var greencrystalImage = $("<img>").addClass("crystalImage3").attr("src", "assets/images/crystalc.jpg").data("greencrystalvalue", greencrystalNumber);
+	 	var greencrystalImage = $("<img>").addClass("crystalImage3").attr("src", "assets/images/crystalc.png").data("greencrystalvalue", greencrystalNumber);
 
 		$("#crystals").append(greencrystalImage);
 
@@ -164,17 +161,14 @@
 						greencrystalValue = $(this).data("greencrystalvalue", greencrystalNumber);
 				
 			}
-                var html = 
-                "<p>Wins: " + wins + "</p>" +
-                "<p>Losses: " + losses + "</p>";
-
-                document.querySelector('#displayResults').innerHTML = html;
+                $('#displayWins').text('Wins: ' + wins);
+				$('#displayLosses').text('Losses: ' + losses);
 
 	});
 
 		var yellowcrystalNumber = Math.floor(Math.random() * 12 + 1);
 
-	 	var yellowcrystalImage = $("<img>").addClass("crystalImage4").attr("src", "assets/images/crystald.jpg").data("yellowcrystalvalue", yellowcrystalNumber);
+	 	var yellowcrystalImage = $("<img>").addClass("crystalImage4").attr("src", "assets/images/crystald.png").data("yellowcrystalvalue", yellowcrystalNumber);
 
 		$("#crystals").append(yellowcrystalImage);
 
@@ -209,24 +203,7 @@
 						yellowcrystalValue = $(this).data("yellowcrystalvalue", yellowcrystalNumber);
 				
 			}
-                var html = 
-                "<p>Wins: " + wins + "</p>" +
-                "<p>Losses: " + losses + "</p>";
-
-                document.querySelector('#displayResults').innerHTML = html;
+                $('#displayWins').text('Wins: ' + wins);
+				$('#displayLosses').text('Losses: ' + losses);
 
 	});
-
-
-	
-
-
-// looks into your
-// redcrystalValue and 
-// redcrystalNumber  
-// and how you are using them
-
-// Are they interacting because of the same ID"#crystals",  or are they interacting because of the counter.
-
-
-

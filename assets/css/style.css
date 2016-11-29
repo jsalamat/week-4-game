@@ -1,4 +1,55 @@
-.crystalImage {
-	width: 300px;
-	height: 300px;
+.header {
+	background-color: #ffef96;
+	height: 100px;
+	text-align: center;
+	padding: 10px;
+	margin: 0;
+}
+
+.empresslogo {
+	height: 120px;
+}
+
+h1 {
+	font-family: 'Berkshire Swash', cursive;
+	letter-spacing: 1px;
+	font-size: 30px;
+}
+
+.jumbotron {
+    background: url(../images/Amano_FFIII_Group.jpg) no-repeat center center;
+    background-size: cover;
+    height: 764px;
+    text-align: left;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.crystalImage1, .crystalImage2, .crystalImage3, .crystalImage4 {
+	background-color: rgba(255, 255, 255, 0.6);
+	width: 105px;
+	height: 105px;
+	margin: 10px;
+    border: 2px solid lightblue;
+    cursor: pointer;
+}
+
+.container {
+	max-width: 900px;
+	margin: 10px auto 0 auto;
+}
+
+#summary {
+	background-color: rgba(183, 215, 232, 0.4);
+	width: 550px;
+	padding: 20px;
+	margin: 0px;
+	border: 2px solid lightblue;
+}
+
+div.transbox p {
+	font-family: 'Rufina', serif;
+	line-height: 1.25;
+	margin: 10px;
+    color: #000000;
 }
