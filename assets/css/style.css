@@ -28,13 +28,6 @@
 	font-size: 30px;
 }
 
-h2 {
-	color: #efac68;
-	font-family: 'Berkshire Swash', cursive;
-	letter-spacing: 2px;
-	font-size: 32px;
-}
-
 .empresslogo {
 	height: 120px;
 	margin: 0;
@@ -50,7 +43,10 @@ h2 {
     text-align: left;
     margin-bottom: 0;
     margin-top: 0;
+    padding-top:25px;
 }
+
+
 
 .crystalImage1, .crystalImage2, .crystalImage3, .crystalImage4 {
 	background-color: rgba(255, 255, 255, 0.6);
@@ -105,13 +101,53 @@ div.transbox p {
     color: #000000;
 }
 
+#scoreBar {
+	background-color: rgba(183, 215, 232, 0.4);
+	font-family: 'Rufina', serif;
+	font-size: 20px;
+	width: 250px;
+	padding: 15px;
+	margin: 20px;
+	/*border: 2px solid lightblue;*/
+}
+
+h2 {
+	color: #ffffff;
+	font-family: 'Berkshire Swash', cursive;
+	letter-spacing: 1px;
+	font-size: 28px;
+	margin: 0;
+	padding: 0;
+}
+
+#empressGuess {
+	padding: 15px 15px 5px 20px;
+	margin: 20px 0 0 0;
+	line-height: 0;
+	border-radius: 25px;
+	background-color: #efac68;
+	width: 340px;
+	height: 60px;
+}
+
+#yourGuess {
+	padding: 15px 15px 5px 20px;
+	margin: 20px 0 0 0;
+	line-height: 0;
+	border-radius: 25px;
+	background-color: #5174b1;
+	width: 340px;
+	height: 60px;
+}
+
+
 .footer { 
-  background: #ffef96;
+  background: #5095af;
   height: 80px;
 }
 
 .footer p {
-  color: #029cf4;
+  color: #ffffff;
   font-size: 14px;
   height: 80px;
   line-height: 80px;
