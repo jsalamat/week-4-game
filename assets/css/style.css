@@ -1,19 +1,46 @@
 .header {
-	background-color: #ffef96;
-	height: 100px;
+	font-family: 'Berkshire Swash', cursive;
 	text-align: center;
-	padding: 10px;
+	background-color: #06b0ca;
+	height: 120px;
+	padding: 0;
 	margin: 0;
+}
+
+.header h1 {
+	color: #ffffff;
+	font-family: 'Berkshire Swash', cursive;
+	text-decoration: none;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	padding-bottom: 3px;
+	letter-spacing: 1px;
+	font-size: 36px;
+	
+}
+
+.header h2 {
+	color: #ffffff;
+	font-family: 'Berkshire Swash', cursive;
+	line-height: 0;
+	margin-top: 15px;
+	letter-spacing: 1px;
+	font-size: 30px;
+}
+
+h2 {
+	color: #efac68;
+	font-family: 'Berkshire Swash', cursive;
+	letter-spacing: 2px;
+	font-size: 32px;
 }
 
 .empresslogo {
 	height: 120px;
-}
-
-h1 {
-	font-family: 'Berkshire Swash', cursive;
-	letter-spacing: 1px;
-	font-size: 30px;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	z-index: 2;
 }
 
 .jumbotron {
@@ -32,24 +59,61 @@ h1 {
 	margin: 10px;
     border: 2px solid lightblue;
     cursor: pointer;
+    -webkit-transition-duration: 1s; /* Safari */
+    transition-duration: 1s;
 }
+
+.crystalImage1:hover {
+	background-color: #9cb6fc;
+    border: 2px solid orange;
+}
+
+.crystalImage2:hover {
+	background-color: #d53654;
+    border: 2px solid orange;
+}
+
+.crystalImage3:hover {
+	background-color: #a2fe45;
+    border: 2px solid orange;
+}
+
+.crystalImage4:hover {
+	background-color: #f3732a;
+    border: 2px solid orange;
+}
+
 
 .container {
 	max-width: 900px;
-	margin: 10px auto 0 auto;
+	margin: 0 auto 0 auto;
 }
 
 #summary {
 	background-color: rgba(183, 215, 232, 0.4);
 	width: 550px;
-	padding: 20px;
+	padding: 15px;
 	margin: 0px;
 	border: 2px solid lightblue;
 }
 
 div.transbox p {
+	font-size: 15px;
 	font-family: 'Rufina', serif;
 	line-height: 1.25;
 	margin: 10px;
     color: #000000;
+}
+
+.footer { 
+  background: #ffef96;
+  height: 80px;
+}
+
+.footer p {
+  color: #029cf4;
+  font-size: 14px;
+  height: 80px;
+  line-height: 80px;
+  margin: 0;
 }
