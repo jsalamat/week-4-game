@@ -26,7 +26,7 @@
 	// x = 19, y = 120
 	// Math.floor(Math.random() * ((y-x)+1) + x);
 	// Math.floor(Math.random() * y + x);
-	var targetNumber = Math.floor(Math.random() * 120 + 19);
+	var targetNumber = Math.floor(Math.random() * 101 + 19);
 		
 		
 	// The player will be shown a random number at the start of the game.
@@ -40,15 +40,15 @@
 	$('#displayLosses').text('Losses: ' + losses);
 	$('#totalScore').text(counter);
 
-	var bluecrystalNumber = Math.floor(Math.random() * 12 + 1);
+	var bluecrystalNumber = Math.floor(Math.random() * 11 + 1);
 
-	 var bluecrystalImage = $("<img>").addClass("crystalImage1").attr("src", "assets/images/crystala.png").data("crystalvalue", bluecrystalNumber);
+	 var bluecrystalImage = $("<img>").addClass("crystalImage1").attr("src", "assets/images/crystala.png").data("bluecrystalvalue", bluecrystalNumber);
 
 		$("#crystals").append(bluecrystalImage);
 
 		$('.crystalImage1').on('click', function() {
 
-		bluecrystalValue = ($(this).data("crystalvalue"));
+		bluecrystalValue = ($(this).data("bluecrystalvalue"));
 				console.log(bluecrystalValue);
 			counter = counter + bluecrystalValue;
 			$('#totalScore').text(counter);
@@ -58,31 +58,42 @@
 				$('#playerStatus').text('You Win!');
 				counter = 0;
 				$('#totalScore').text(counter);
-				targetNumber = Math.floor(Math.random() * 120 + 19);
+				targetNumber = Math.floor(Math.random() * 101 + 19);
 				$('#numberToGuess').text(targetNumber);
-					bluecrystalNumber = Math.floor(Math.random() * 12 + 1);
-						bluecrystalValue = $(this).data(bluecrystalNumber);
-
+					bluecrystalNumber = Math.floor(Math.random() * 11 + 1);
+						bluecrystalValue = $('.crystalImage1').data("bluecrystalvalue", bluecrystalNumber);
+					redcrystalNumber = Math.floor(Math.random() * 11 + 1);
+						redcrystalValue = $('.crystalImage2').data("redcrystalvalue", redcrystalNumber);
+					greencrystalNumber = Math.floor(Math.random() * 11 + 1);
+						greencrystalValue = $('.crystalImage3').data("greencrystalvalue", greencrystalNumber);
+					yellowcrystalNumber = Math.floor(Math.random() * 11 + 1);
+						yellowcrystalValue = $('.crystalImage4').data("yellowcrystalvalue", yellowcrystalNumber);
+			
 			} 
 			else if (counter > targetNumber) {
 				losses++
 				$('#playerStatus').text('You Lose!');
 				counter = 0;
 				$('#totalScore').text(counter);
-				targetNumber = Math.floor(Math.random() * 120 + 19);
+				targetNumber = Math.floor(Math.random() * 101 + 19);
 				
 				$('#numberToGuess').text(targetNumber);
-					bluecrystalNumber = Math.floor(Math.random() * 12 + 1);
+					bluecrystalNumber = Math.floor(Math.random() * 11 + 1);
+						bluecrystalValue = $('.crystalImage1').data("bluecrystalvalue", bluecrystalNumber);
+					redcrystalNumber = Math.floor(Math.random() * 11 + 1);
+						redcrystalValue = $('.crystalImage2').data("redcrystalvalue", redcrystalNumber);
+					greencrystalNumber = Math.floor(Math.random() * 11 + 1);
+						greencrystalValue = $('.crystalImage3').data("greencrystalvalue", greencrystalNumber);
+					yellowcrystalNumber = Math.floor(Math.random() * 11 + 1);
+						yellowcrystalValue = $('.crystalImage4').data("yellowcrystalvalue", yellowcrystalNumber);
 
-						bluecrystalValue = $(this).data("crystalvalue", bluecrystalNumber);
-				
 			}
                 $('#displayWins').text('Wins: ' + wins);
 				$('#displayLosses').text('Losses: ' + losses);
 
 	});
 
-	var redcrystalNumber = Math.floor(Math.random() * 12 + 1);
+	var redcrystalNumber = Math.floor(Math.random() * 11 + 1);
 
 	 	var redcrystalImage = $("<img>").addClass("crystalImage2").attr("src", "assets/images/crystalb.png").data("redcrystalvalue", redcrystalNumber);
 
@@ -100,10 +111,16 @@
 				$('#playerStatus').text('You Win!');
 				counter = 0;
 				$('#totalScore').text(counter);
-				targetNumber = Math.floor(Math.random() * 120 + 19);
+				targetNumber = Math.floor(Math.random() * 101 + 19);
 				$('#numberToGuess').text(targetNumber);
-					redcrystalNumber = Math.floor(Math.random() * 12 + 1);
-						redcrystalValue = $(this).data("redcrystalvalue", redcrystalNumber);
+					bluecrystalNumber = Math.floor(Math.random() * 11 + 1);
+						bluecrystalValue = $('.crystalImage1').data("bluecrystalvalue", bluecrystalNumber);
+					redcrystalNumber = Math.floor(Math.random() * 11 + 1);
+						redcrystalValue = $('.crystalImage2').data("redcrystalvalue", redcrystalNumber);
+					greencrystalNumber = Math.floor(Math.random() * 11 + 1);
+						greencrystalValue = $('.crystalImage3').data("greencrystalvalue", greencrystalNumber);
+					yellowcrystalNumber = Math.floor(Math.random() * 11 + 1);
+						yellowcrystalValue = $('.crystalImage4').data("yellowcrystalvalue", yellowcrystalNumber);
 
 			} 
 			else if (counter > targetNumber) {
@@ -111,12 +128,17 @@
 				$('#playerStatus').text('You Lose!');
 				counter = 0;
 				$('#totalScore').text(counter);
-				targetNumber = Math.floor(Math.random() * 120 + 19);
+				targetNumber = Math.floor(Math.random() * 101 + 19);
 				
 				$('#numberToGuess').text(targetNumber);
-					redcrystalNumber = Math.floor(Math.random() * 12 + 1);
-
-						redcrystalValue = $(this).data("redcrystalvalue", redcrystalNumber);
+					bluecrystalNumber = Math.floor(Math.random() * 11 + 1);
+						bluecrystalValue = $('.crystalImage1').data("bluecrystalvalue", bluecrystalNumber);
+					redcrystalNumber = Math.floor(Math.random() * 11 + 1);
+						redcrystalValue = $('.crystalImage2').data("redcrystalvalue", redcrystalNumber);
+					greencrystalNumber = Math.floor(Math.random() * 11 + 1);
+						greencrystalValue = $('.crystalImage3').data("greencrystalvalue", greencrystalNumber);
+					yellowcrystalNumber = Math.floor(Math.random() * 11 + 1);
+						yellowcrystalValue = $('.crystalImage4').data("yellowcrystalvalue", yellowcrystalNumber);
 				
 			}
                 $('#displayWins').text('Wins: ' + wins);
@@ -124,7 +146,7 @@
 
 	});
 
-	var greencrystalNumber = Math.floor(Math.random() * 12 + 1);
+	var greencrystalNumber = Math.floor(Math.random() * 11 + 1);
 
 	 	var greencrystalImage = $("<img>").addClass("crystalImage3").attr("src", "assets/images/crystalc.png").data("greencrystalvalue", greencrystalNumber);
 
@@ -142,10 +164,16 @@
 				$('#playerStatus').text('You Win!');
 				counter = 0;
 				$('#totalScore').text(counter);
-				targetNumber = Math.floor(Math.random() * 120 + 19);
+				targetNumber = Math.floor(Math.random() * 101 + 19);
 				$('#numberToGuess').text(targetNumber);
-					greencrystalNumber = Math.floor(Math.random() * 12 + 1);
-						greencrystalValue = $(this).data("greencrystalvalue", greencrystalNumber);
+					bluecrystalNumber = Math.floor(Math.random() * 11 + 1);
+						bluecrystalValue = $('.crystalImage1').data("bluecrystalvalue", bluecrystalNumber);
+					redcrystalNumber = Math.floor(Math.random() * 11 + 1);
+						redcrystalValue = $('.crystalImage2').data("redcrystalvalue", redcrystalNumber);
+					greencrystalNumber = Math.floor(Math.random() * 11 + 1);
+						greencrystalValue = $('.crystalImage3').data("greencrystalvalue", greencrystalNumber);
+					yellowcrystalNumber = Math.floor(Math.random() * 11 + 1);
+						yellowcrystalValue = $('.crystalImage4').data("yellowcrystalvalue", yellowcrystalNumber);
 
 			} 
 			else if (counter > targetNumber) {
@@ -153,12 +181,18 @@
 				$('#playerStatus').text('You Lose!');
 				counter = 0;
 				$('#totalScore').text(counter);
-				targetNumber = Math.floor(Math.random() * 120 + 19);
+				targetNumber = Math.floor(Math.random() * 101 + 19);
 				
 				$('#numberToGuess').text(targetNumber);
-					greencrystalNumber = Math.floor(Math.random() * 12 + 1);
+					bluecrystalNumber = Math.floor(Math.random() * 11 + 1);
+						bluecrystalValue = $('.crystalImage1').data("bluecrystalvalue", bluecrystalNumber);
+					redcrystalNumber = Math.floor(Math.random() * 11 + 1);
+						redcrystalValue = $('.crystalImage2').data("redcrystalvalue", redcrystalNumber);
+					greencrystalNumber = Math.floor(Math.random() * 11 + 1);
+						greencrystalValue = $('.crystalImage3').data("greencrystalvalue", greencrystalNumber);
+					yellowcrystalNumber = Math.floor(Math.random() * 11 + 1);
+						yellowcrystalValue = $('.crystalImage4').data("yellowcrystalvalue", yellowcrystalNumber);
 
-						greencrystalValue = $(this).data("greencrystalvalue", greencrystalNumber);
 				
 			}
                 $('#displayWins').text('Wins: ' + wins);
@@ -166,7 +200,7 @@
 
 	});
 
-		var yellowcrystalNumber = Math.floor(Math.random() * 12 + 1);
+		var yellowcrystalNumber = Math.floor(Math.random() * 11 + 1);
 
 	 	var yellowcrystalImage = $("<img>").addClass("crystalImage4").attr("src", "assets/images/crystald.png").data("yellowcrystalvalue", yellowcrystalNumber);
 
@@ -184,10 +218,16 @@
 				$('#playerStatus').text('You Win!');
 				counter = 0;
 				$('#totalScore').text(counter);
-				targetNumber = Math.floor(Math.random() * 120 + 19);
+				targetNumber = Math.floor(Math.random() * 101 + 19);
 				$('#numberToGuess').text(targetNumber);
-					yellowcrystalNumber = Math.floor(Math.random() * 12 + 1);
-						yellowcrystalValue = $(this).data("yellowcrystalvalue", yellowcrystalNumber);
+					bluecrystalNumber = Math.floor(Math.random() * 11 + 1);
+						bluecrystalValue = $('.crystalImage1').data("bluecrystalvalue", bluecrystalNumber);
+					redcrystalNumber = Math.floor(Math.random() * 11 + 1);
+						redcrystalValue = $('.crystalImage2').data("redcrystalvalue", redcrystalNumber);
+					greencrystalNumber = Math.floor(Math.random() * 11 + 1);
+						greencrystalValue = $('.crystalImage3').data("greencrystalvalue", greencrystalNumber);
+					yellowcrystalNumber = Math.floor(Math.random() * 11 + 1);
+						yellowcrystalValue = $('.crystalImage4').data("yellowcrystalvalue", yellowcrystalNumber);
 
 			} 
 			else if (counter > targetNumber) {
@@ -195,12 +235,17 @@
 				$('#playerStatus').text('You Lose!');
 				counter = 0;
 				$('#totalScore').text(counter);
-				targetNumber = Math.floor(Math.random() * 120 + 19);
+				targetNumber = Math.floor(Math.random() * 101 + 19);
 				
 				$('#numberToGuess').text(targetNumber);
-					yellowcrystalNumber = Math.floor(Math.random() * 12 + 1);
-
-						yellowcrystalValue = $(this).data("yellowcrystalvalue", yellowcrystalNumber);
+					bluecrystalNumber = Math.floor(Math.random() * 11 + 1);
+						bluecrystalValue = $('.crystalImage1').data("bluecrystalvalue", bluecrystalNumber);
+					redcrystalNumber = Math.floor(Math.random() * 11 + 1);
+						redcrystalValue = $('.crystalImage2').data("redcrystalvalue", redcrystalNumber);
+					greencrystalNumber = Math.floor(Math.random() * 11 + 1);
+						greencrystalValue = $('.crystalImage3').data("greencrystalvalue", greencrystalNumber);
+					yellowcrystalNumber = Math.floor(Math.random() * 11 + 1);
+						yellowcrystalValue = $('.crystalImage4').data("yellowcrystalvalue", yellowcrystalNumber);
 				
 			}
                 $('#displayWins').text('Wins: ' + wins);
